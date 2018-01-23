@@ -31,7 +31,9 @@
 
 #### Izbjegabati koristenje `let`, `subject` i `before` konstrukata?
 
-- Koristiti `let` i `subject`. |
+<ul>
+  <li class="fragment"> Koristiti `let` i `subject`. </li>
+</ul>
 
 ---?code=src/let_spec.rb&lang=ruby
 
@@ -39,9 +41,11 @@
 
 #### Trebaju li factory sadrzavat asocijacije
 
-- Potrebni su jer vam trebaju validni objekti. |
-- S druge strane ljudi su opekli na njima. |
-- Prijedlog: Za parente koristiti `traits`, za ostale koristi `build`. |
+<ul>
+<li class="fragment"> Potrebni su jer vam trebaju validni objekti. </li>
+<li class="fragment"> S druge strane ljudi su opekli na njima. </li>
+<li class="fragment"> Prijedlog: Za parente koristiti `traits`, za ostale koristi `build`. </li>
+<ul>
 
 ---?code=src/factories_factory.rb&lang=ruby&title=Factory
 
