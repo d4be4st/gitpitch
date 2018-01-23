@@ -26,4 +26,15 @@
 
 - Koristiti `let` i `subject`
 
----?code=src/let_spec&lang=ruby
+---?code=src/let_spec.rb&lang=ruby
+
+---
+
+### Trebaju li factory sadrzavat asocijacije
+
+- Potrebni su jer vam trebaju validni objekti. |
+- S druge strane ljudi su opekli na njima. |
+- Prijedlog: Stavljati asocijacije u traitove |
+
+---?code=src/factories.rb&lang=ruby
+
