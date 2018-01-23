@@ -151,8 +151,10 @@
 
 #### kako testirati mailove? unit/integration/oboje? testiranje mailova kroz integracijske testove - što bi sve trebali provjeriti? (da je poslan, kome je poslan, subject...) Korsitit mailer previews?
 
-- Testirat da li se dovoljno mailova poslalo |
-- kod stvaranja mailova koristie [mailer preview](http://guides.rubyonrails.org/action_mailer_basics.html#previewing-emails) |
+<ul>
+<li class="fragment">Testirat da li se dovoljno mailova poslalo</li>
+<li class="fragment">kod stvaranja mailova koristie [mailer preview](http://guides.rubyonrails.org/action_mailer_basics.html#previewing-emails) </li>
+</ul>
 
 ---
 
