@@ -34,7 +34,7 @@
 
 - Potrebni su jer vam trebaju validni objekti. |
 - S druge strane ljudi su opekli na njima. |
-- Prijedlog: Stavljati asocijacije u traitove |
+- Prijedlog: Za parente koristiti `traits`, za ostale koristi `build`
 
 ---?code=src/factories.rb&lang=ruby
 
