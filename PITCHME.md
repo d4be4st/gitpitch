@@ -22,7 +22,7 @@
 
 ---
 
-### Izbjegabati koristenje :let, :subject i :before konstrukata?
+### Izbjegabati koristenje `let`, `subject` i `before` konstrukata?
 
 - Koristiti `let` i `subject`
 
