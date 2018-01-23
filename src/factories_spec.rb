@@ -1,19 +1,3 @@
-# factories/activity.rb
-
-FactoryBot.define do
-  factory :activity do
-    name       'Bitches'
-    cause      { build(:cause, house: house) }
-    supervisor { build(:user, house: house) }
-
-    trait :with_parents do
-      house
-    end
-  end
-end
-
-# activity_controller_spec.rb
-
 RSpec.describe V1::ActivitiesController do
   let(:house) { create(:house) }
   let(:user) { create(:user, house: house, role: :admin) }
