@@ -20,4 +20,10 @@
 
 ---?code=src/controller_spec.rb&lang=ruby&title=Controller spec
 
+---
 
+### Izbjegabati koristenje :let, :subject i :before konstrukata?
+
+- Koristiti `let` i `subject`
+
+---?code=src/let_spec&lang=ruby
