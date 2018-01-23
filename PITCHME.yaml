@@ -7,7 +7,7 @@
 theme : sky
 theme-override : assets/css/PITCHME.css
 logo : assets/image/logo.png
-highlight : github
+highlight : ocean
 transition : none
 published : true
 footnote : ''
