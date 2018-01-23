@@ -4,7 +4,7 @@
 
 ---
 
-## Tips!
+## Tips1!
 
 <br>
 
@@ -73,7 +73,7 @@ http.createServer(function (request, response) {
 ## Template Help
 
 - [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
+  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides)
 - [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
 - [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
 - [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
