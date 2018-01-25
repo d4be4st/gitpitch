@@ -8,6 +8,7 @@
 
 - Vecina vas ne vidi zasto postoje dva filea |
 - 99% vremena vam treba cijeli rails kad testirate |
+- Prijedlog: Mergati spec_helper i rails_helper u jedan
 
 ---
 
@@ -19,13 +20,11 @@
 
 #### Kako testirati response koji controlleri vrate?
 
+- Dosli smo do zakljucka da je bolje raditi request testove nego kontrolerske |
 - Http status |
 - JSON Shemu bez sadrzaja (ako imate neku kompleksu logiku to testirat kroz unit testove) u request testovima |
-- ukljuciti render_views u kontrolerskim |
 
 ---?code=src/request_spec.rb&lang=ruby&title=Request spec
-
----?code=src/controller_spec.rb&lang=ruby&title=Controller spec
 
 ---
 
@@ -33,6 +32,7 @@
 
 <ul>
   <li class="fragment"> Koristiti `let` i `subject`. </li>
+  <li class="fragment"> Da li cete koristiti `before do` ili cete stvarati unutar samo exampla, to je stvar dogovora. Ali budite konzistenti po projektu. </li>
 </ul>
 
 ---?code=src/let_spec.rb&lang=ruby
@@ -44,19 +44,16 @@
 <ul>
 <li class="fragment"> Potrebni su jer vam trebaju validni objekti. </li>
 <li class="fragment"> S druge strane ljudi su opekli na njima. </li>
-<li class="fragment"> Prijedlog: Za parente koristiti `traits`, za ostale koristi `build`. </li>
+<li class="fragment"> Prijedlog: koristi `build` za asocijacije koje imaju istog parenta. </li>
 <ul>
 
 ---?code=src/factories_factory.rb&lang=ruby&title=Factory
-
----?lang=ruby&code=src/factories_spec.rb&title=Spec
 
 ---
 
 #### Treba li testirati one-linere u modelima, tipa asocijacije i validacije?
 
-- 6 vas je za samo custom validacije |
-- 5 vas je za sve |
+- Dosli smo do zakljucka da ne treba. Treba testirat samo custom validacije.
 
 ---
 
@@ -153,7 +150,7 @@
 
 <ul>
 <li class="fragment">Testirat da li se dovoljno mailova poslalo</li>
-<li class="fragment">kod stvaranja mailova koristie [mailer preview](http://guides.rubyonrails.org/action_mailer_basics.html#previewing-emails) </li>
+<li class="fragment">kod stvaranja mailova koristite [mailer preview](http://guides.rubyonrails.org/action_mailer_basics.html#previewing-emails) </li>
 </ul>
 
 ---

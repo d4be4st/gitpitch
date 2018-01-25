@@ -3,9 +3,6 @@ FactoryBot.define do
     name       'Bitches'
     cause      { build(:cause, house: house) }
     supervisor { build(:user, house: house) }
-
-    trait :with_parents do
-      house
-    end
+    house
   end
 end
