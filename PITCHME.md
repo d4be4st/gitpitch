@@ -151,5 +151,11 @@ end
 app.lvh.me/users => 200 OK
 api.lvh.me/users => 200 OK
 ```
+
 ---
 
+# CORS?
+
+---
+
+# kthxby
