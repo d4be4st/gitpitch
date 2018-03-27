@@ -43,11 +43,11 @@ Rails.application.config.session_store :cookie_store,
 
 ---
 
-BONUS: Na kolko nacina mozete usera logoutat?
+### BONUS: Na kolko nacina mozete logoutat usera?
 
 ---
 
-Kako podjeliti session izmedu dvije domene?
+### Kako podjeliti session izmedu dvije domene?
 
 ---
 
