@@ -28,7 +28,7 @@ Rails.application.config.session_store :cookie_store,
 ```
 ---
 
-Slika requset responsa sa cookijima
+![Request and Response](http://take.ms/iVZMH)
 
 ---
 
@@ -81,12 +81,7 @@ Kako developat sa ovakvim settingom?
 ```sh
 ➜ dig lvh.me
 
-; <<>> DiG 9.8.3-P1 <<>> lvh.me
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46459
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 5, ADDITIONAL: 10
-
+;; GIBBERISH
 ;; QUESTION SECTION:
 ;lvh.me.                                IN      A
 
@@ -113,8 +108,37 @@ config.paths['config/routes.rb'].unshift(
 
 ---
 
-Devise problemi
+```ruby
+Rails.application.routes.draw do
+  constraints subdomain: 'app' do
+    devise_for :users
+
+    root 'public/home#home'
+
+    namespace :public, path: '/(:locale)' do
+      resource :dashboard
+    end
+  end
+end
+```
 
 ---
 
-## Cors
+```ruby
+Rails.application.routes.draw do
+  constraints subdomain: 'api' do
+    resources :accounts
+  end
+
+  resources :users
+  resources :accounts
+end
+```
+---
+
+```ruby
+app.lvh.me/users => 200 OK
+api.lvh.me/users => 200 OK
+```
+---
+
