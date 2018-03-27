@@ -28,7 +28,7 @@ Rails.application.config.session_store :cookie_store,
 ```
 ---
 
-![Request and Response](http://take.ms/iVZMH)
+![Request and Response](http://take.ms/3OI1q)
 
 ---
 
@@ -51,19 +51,27 @@ Kako podjeliti session izmedu dvije domene?
 
 ---
 
-Slika session store page
+![Session Store](http://take.ms/a6Cz5)
 
 ---
 
-Slika cookie store pagea
+![Cookie Store](http://take.ms/6TZTZ)
 
 ---
 
-stackoverflow slika
+![Rack Session Absctract](http://take.ms/PU39I)
 
 ---
 
-Slika cookie jar github pagea
+![Stackoverflow](http://take.ms/O63qt)
+
+---
+
+![Github](http://take.ms/tvSTS)
+
+---
+
+![Cookie](http://take.ms/LiuzI)
 
 ---
 
@@ -96,6 +104,10 @@ rails server -b lvh.me
 ```
 ---
 
+![](http://take.ms/zXSmj)
+
+---
+
 ## Routes
 
 ---
@@ -109,15 +121,14 @@ config.paths['config/routes.rb'].unshift(
 ---
 
 ```ruby
+# app/config/routes/public.rb
 Rails.application.routes.draw do
-  constraints subdomain: 'app' do
-    devise_for :users
+  devise_for :users
 
-    root 'public/home#home'
+  root 'public/home#home'
 
-    namespace :public, path: '/(:locale)' do
-      resource :dashboard
-    end
+  namespace :public, path: '/(:locale)' do
+    resource :dashboard
   end
 end
 ```
