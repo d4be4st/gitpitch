@@ -1,161 +1,72 @@
-# Go home Rails, you are drunk!
+---?color=linear-gradient(to right, #c02425, #f0cb35)
+@title[Introduction]
+
+@snap[west headline text-white span-70]
+GitPitch<br>*The Template*
+@snapend
+
+@snap[south-west byline  text-white]
+The Fastest Way From Idea To Presentation.
+@snapend
 
 ---
+@title[Slide Markdown]
 
-## Sessions
+### Each slide in this presentation is provided as a *template*.
 
----
+<br><br>
 
-In computer science, in particular networking, a **session** is a semi-permanent interactive information interchange, also known as a dialogue, a conversation or a meeting, between two or more communicating devices, or **between a computer and user**.
+1. Select only the slide templates that you need.
+1. Customize the template _markdown content_.
+1. Optionally, override template _styles_ and _settings_.
+1. Then present and publish with GitPitch @fa[smile-o]
+<br><br>
 
----
-
-In computer science, in particular networking, a **session** is a **semi-permanent** interactive information interchange, also known as a dialogue, a conversation or a meeting, between two or more communicating devices, or **between a computer and user**.
-
----
-
-### Statefulness
 
 ---
+@title[Tip! Fullscreen]
 
-An **cookie** is a small piece of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing.
+![TIP](template/img/tip.png)
+<br>
+For the best viewing experience, press F for fullscreen.
+@css[template-note](We recommend using the *SPACE* key to navigate between slides.)
 
----
+---?include=template/md/split-screen/PITCHME.md
 
-```ruby
-Rails.application.config.session_store :cookie_store,
-  key: '_truck_web_session'
-```
----
+---?include=template/md/sidebar/PITCHME.md
 
-![Request and Response](http://take.ms/3OI1q)
+---?include=template/md/list-content/PITCHME.md
 
----
+---?include=template/md/boxed-text/PITCHME.md
 
-```json
-{
-  "session_id": "833642bd2d4aca55954acfa706f9fdd7",
-  "user_return_to": "/classes/76/lessons/21/docs/182",
-  "warden.user.user.key": [[1],"$2a$10$bFsXlgshTEuVQzb3Rj6FLe"],
-  "_csrf_token": "PBoIi4cPDHr/5+B0FQGDW7qYfVcK7CFRWpbFimGRIQA=",
-}
-```
+---?include=template/md/image/PITCHME.md
 
----
+---?include=template/md/sidebox/PITCHME.md
 
-### BONUS: Na kolko nacina mozete logoutat usera?
+---?include=template/md/code-presenting/PITCHME.md
 
----
+---?include=template/md/header-footer/PITCHME.md
 
-### Kako podjeliti session izmedu dvije domene?
+---?include=template/md/quotation/PITCHME.md
 
----
+---?include=template/md/announcement/PITCHME.md
 
-![Session Store](http://take.ms/a6Cz5)
+---?include=template/md/about/PITCHME.md
+
+---?include=template/md/wrap-up/PITCHME.md
 
 ---
+@title[The Template Docs]
 
-![Cookie Store](http://take.ms/6TZTZ)
+@snap[west span-100]
+### **Now it's @color[#E49436](your) turn.**
 
----
+<br>
 
-![Rack Session Absctract](http://take.ms/PU39I)
+#### Use these templates to create custom slides.
+#### **Then amaze your audience with a Git@color[#E49436](Pitch) slideshow @fa[smile-o]**
+@snapend
 
----
-
-![Stackoverflow](http://take.ms/O63qt)
-
----
-
-![Github](http://take.ms/tvSTS)
-
----
-
-![Cookie](http://take.ms/LiuzI)
-
----
-
-```ruby
-Rails.application.config.session_store :cookie_store,
-  key: '_truck_web_session', tld_length: 2, domain: :all
-```
-
----
-
-Kako developat sa ovakvim settingom?
-
----
-
-```sh
-➜ dig lvh.me
-
-;; GIBBERISH
-;; QUESTION SECTION:
-;lvh.me.                                IN      A
-
-;; ANSWER SECTION:
-lvh.me.                 877     IN      A       127.0.0.1
-```
-
----
-
-```ruby
-rails server -b lvh.me
-```
----
-
-![](http://take.ms/zXSmj)
-
----
-
-## Routes
-
----
-
-```ruby
-config.paths['config/routes.rb'].unshift(
-  *Dir[Rails.root.join('config', 'routes', '*.rb')]
-)
-```
-
----
-
-```ruby
-# app/config/routes/public.rb
-Rails.application.routes.draw do
-  devise_for :users
-
-  root 'public/home#home'
-
-  namespace :public, path: '/(:locale)' do
-    resource :dashboard
-  end
-end
-```
-
----
-
-```ruby
-Rails.application.routes.draw do
-  constraints subdomain: 'api' do
-    resources :accounts
-  end
-
-  resources :users
-  resources :accounts
-end
-```
----
-
-```ruby
-app.lvh.me/users => 200 OK
-api.lvh.me/users => 200 OK
-```
-
----
-
-# CORS?
-
----
-
-# kthxby
+@snap[south docslink span-100]
+For supporting documentation see the [The Template Docs](https://gitpitch.com/docs/the-template)
+@snapend
