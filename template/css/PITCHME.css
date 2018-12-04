@@ -272,3 +272,8 @@
   opacity: 0.75 !important;
   font-size: 50% !important;
 }
+
+.list-smaller li {
+  font-size: 30px;
+}
+

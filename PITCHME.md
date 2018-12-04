@@ -1,72 +1,185 @@
----?color=linear-gradient(to right, #c02425, #f0cb35)
-@title[Introduction]
+@title[Intro]
 
-@snap[west headline text-white span-70]
-GitPitch<br>*The Template*
-@snapend
-
-@snap[south-west byline  text-white]
-The Fastest Way From Idea To Presentation.
-@snapend
+# Working with your terminal
 
 ---
-@title[Slide Markdown]
 
-### Each slide in this presentation is provided as a *template*.
+@title[iTerm]
 
-<br><br>
+## iTerm
 
-1. Select only the slide templates that you need.
-1. Customize the template _markdown content_.
-1. Optionally, override template _styles_ and _settings_.
-1. Then present and publish with GitPitch @fa[smile-o]
-<br><br>
+Note:
 
+- not the same as terminal
+- support for more colors
+- support for tabs and panes
+- configurable
 
----
-@title[Tip! Fullscreen]
++++
 
-![TIP](template/img/tip.png)
-<br>
-For the best viewing experience, press F for fullscreen.
-@css[template-note](We recommend using the *SPACE* key to navigate between slides.)
-
----?include=template/md/split-screen/PITCHME.md
-
----?include=template/md/sidebar/PITCHME.md
-
----?include=template/md/list-content/PITCHME.md
-
----?include=template/md/boxed-text/PITCHME.md
-
----?include=template/md/image/PITCHME.md
-
----?include=template/md/sidebox/PITCHME.md
-
----?include=template/md/code-presenting/PITCHME.md
-
----?include=template/md/header-footer/PITCHME.md
-
----?include=template/md/quotation/PITCHME.md
-
----?include=template/md/announcement/PITCHME.md
-
----?include=template/md/about/PITCHME.md
-
----?include=template/md/wrap-up/PITCHME.md
-
----
-@title[The Template Docs]
-
-@snap[west span-100]
-### **Now it's @color[#E49436](your) turn.**
-
-<br>
-
-#### Use these templates to create custom slides.
-#### **Then amaze your audience with a Git@color[#E49436](Pitch) slideshow @fa[smile-o]**
+@snap[north]
+### Keybindings
 @snapend
 
-@snap[south docslink span-100]
-For supporting documentation see the [The Template Docs](https://gitpitch.com/docs/the-template)
+Key | effect
+------|--------
+⌘+t | new tab
+⌘+number | jump to tab
+⌘+d | pane vertical
+⌘+Shift+d | pane horizontal
+⌘+⌥+arrows | move around panes
+⌘+Shift+Enter | zoom
+⌘+L | Clear screen
+
++++
+
+@snap[north]
+### Extra
 @snapend
+
+@ul[list-smaller](false)
+- You can drag and drop files from finder to get absolute path
+- You can open files in default application with `open [file]`
+- Preferences:
+  - [General] Confirm quit
+  - [Profile/General] reuse previous session's directory
+  - [Profile/Terminal] unlimited scrollback
+- configure alt + arrows for word skipping: https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x
+@ulend
+
+---
+
+@title[zsh]
+
+zsh
+
++++
+
+@snap[north]
+shell
+@snapend
+
+- `bash` is default
+- differences: https://stackabuse.com/zsh-vs-bash/
+
++++
+
+@snap[north]
+keybindings
+@snapend
+
+Key | effect
+------|--------
+^+d | exit, logout
+^+a | go to beginning of the line
+^+e | go to end of the line
+⌥+f | go forward one word
+^+f | go forward one character
+⌥+b | go back one word
+^+b | go back one character
+
++++
+
+@snap[north]
+keybinding 2
+@snapend
+
+Key | effect
+------|--------
+⌥+Backspace | delete word (without symbols)
+^+w | delete word (with symbols)
+^+u | delete before cursor
+^+k | delete after cursor
+^+p | previous command
+^+n | next command
+^+r | history search
+
++++
+
+@snap[north]
+other
+@snapend
+
+command | effect
+------|--------
+cd | go to home directory
+cd - | go to previous directory
+exec $SHELL | reinitialize shell
+
+---
+
+@title[oh-my-zsh]
+
+OhMyZsh
+
++++
+
+- .zshrc - edit here :)
+- themes: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+- plugins: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview
+  * history-substring-search
+  * z
+  * git (https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)
+- export environment variables
+  * EDITOR
+  * PATH
+
+---
+
+@title[programs]
+
+Programs
+
++++
+
+@snap[north]
+brew
+@snapend
+
+- brew install
+- brew info
+- brew services list
+- brew switch
+- brew doctor
+
++++
+
+@snap[north]
+z
+@snapend
+
+https://github.com/rupa/z
+
++++
+
+@snap[north]
+fzf
+@snapend
+
+- https://github.com/junegunn/fzf#usage
+- rake routes | fzf
+- ^+r - fuzzy history search
+
+
++++
+
+@snap[north]
+cat
+@snapend
+
+cat [file]
+
++++
+
+@snap[north]
+grep
+@snapend
+
+grep [PATTERN] files
+
+---
+
+Clipboard manager
+
+- flycut
+- alfred pro

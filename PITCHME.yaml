@@ -13,7 +13,7 @@ published : true
 # Theme Setting
 # Doc: https://gitpitch.com/docs/settings/theme
 #
-theme : simple
+theme : sky
 
 #
 # Theme-Override Setting
@@ -25,20 +25,20 @@ theme-override : template/css/PITCHME.css
 # Logo Setting
 # https://gitpitch.com/docs/settings/logo
 #
-logo : template/img/logo.png
-logo-position : top-left
+# logo : template/img/logo.png
+# logo-position : top-left
 
 #
 # Title Setting
 # Doc: https://gitpitch.com/docs/settings/title
 #
-title : "GitPitch Quickstart Template"
+title : "Working with your terminal"
 
 #
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "GitPitch - The Fastest Way From Idea To Presentation"
+# footnote : "GitPitch - The Fastest Way From Idea To Presentation"
 
 #
 # Highlight (Code) Setting
