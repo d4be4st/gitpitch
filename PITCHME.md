@@ -51,12 +51,12 @@ Key | effect
 
 @title[zsh]
 
-zsh
+## zsh
 
 +++
 
 @snap[north]
-shell
+### shell
 @snapend
 
 - `bash` is default
@@ -65,7 +65,7 @@ shell
 +++
 
 @snap[north]
-keybindings
+### keybindings
 @snapend
 
 Key | effect
@@ -81,7 +81,7 @@ Key | effect
 +++
 
 @snap[north]
-keybinding 2
+### keybinding 2
 @snapend
 
 Key | effect
@@ -97,7 +97,7 @@ Key | effect
 +++
 
 @snap[north]
-other
+### other
 @snapend
 
 command | effect
@@ -110,7 +110,7 @@ exec $SHELL | reinitialize shell
 
 @title[oh-my-zsh]
 
-OhMyZsh
+## OhMyZsh
 
 +++
 
@@ -128,12 +128,12 @@ OhMyZsh
 
 @title[programs]
 
-Programs
+## Programs
 
 +++
 
 @snap[north]
-brew
+### brew
 @snapend
 
 - brew install
@@ -145,7 +145,7 @@ brew
 +++
 
 @snap[north]
-z
+### z
 @snapend
 
 https://github.com/rupa/z
@@ -153,7 +153,7 @@ https://github.com/rupa/z
 +++
 
 @snap[north]
-fzf
+### fzf
 @snapend
 
 - https://github.com/junegunn/fzf#usage
@@ -164,7 +164,7 @@ fzf
 +++
 
 @snap[north]
-cat
+### cat
 @snapend
 
 cat [file]
@@ -172,14 +172,14 @@ cat [file]
 +++
 
 @snap[north]
-grep
+### grep
 @snapend
 
 grep [PATTERN] files
 
 ---
 
-Clipboard manager
+## Clipboard manager
 
 - flycut
 - alfred pro
