@@ -1,25 +1,53 @@
-/* @font-face {*/
-/*   font-family: GT-Haptik;*/
-/*   src: url(../fonts/GT-Haptik-Regular.ttf) format('ttf');*/
-/* }*/
+@font-face {
+  font-family: GT-Haptik;
+  src: url('https://assets.infinum.co/assets/gt-haptik-regular-webfont-e2876d81515b18ca8f025105e783436afb755f28c71c40b4e5905fd5b9f0df3a.woff2') format('woff2');
+}
 
-/* @font-face {*/
-/*   font-family: GT-Haptik;*/
-/*   src: url(../fonts/GT-Haptik-Bold.ttf) format('ttf');*/
-/*   font-weight: bold;*/
-/* }*/
+@font-face {
+  font-family: GT-Haptik;
+  src: url('https://assets.infinum.co/assets/gt-haptik-bold-webfont-26278a21c5257a94cd35906ad336ce14dfe3c52edd234fa7d8b4d8bd6b420ece.woff2') format('woff2');
+  font-weight: bold;
+}
 
-/* .reveal h1,*/
-/* .reveal h2,*/
-/* .reveal h3,*/
-/* .reveal h4,*/
-/* .reveal h5,*/
-/* .reveal h6 {*/
-/*   font-family: GT-Haptik;*/
-/* }*/
+.reveal {
+  font-family: GT-Haptik;
+  font-weight: bold;
+  color: #535354;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: GT-Haptik;
+  font-weight: bold;
+  color: #535354;
+}
 
 .list-smaller li {
   font-size: 30px;
+}
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+
+.reveal .subtitle{
+  color: #C6C6C6;
+  font-size: 25px;
+}
+
+.reveal .section-red.order-number {
+  font-size: 260px;
+  color: rgba(1,1,1,0.1);
+  font-style: italic;
+}
+
+.reveal .section-red.title {
+  margin-top: 16px;
 }
 
 /* .reveal h2, .reveal h3 {*/

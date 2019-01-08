@@ -1,185 +1,82 @@
 @title[Intro]
 
-# Working with your terminal
+@snap[north-west span-20 margin-top]
+![Logo](template/img/logo.png)
+@snapend
+
+@snap[midpoint]
+# Robosseum
+@snapend
+
+@snap[south-west span-100 subtitle]
+STJEPAN HADJIĆ
+@snapend
+
+---
+@title[Goal]
+
+## @color[#E1473B](goal)
+#### Build a bot that plays texas holdem poker
 
 ---
 
-@title[iTerm]
+@title[Idea]
 
-## iTerm
-
-Note:
-
-- not the same as terminal
-- support for more colors
-- support for tabs and panes
-- configurable
-
-+++
-
-@snap[north]
-### Keybindings
-@snapend
-
-Key | effect
-------|--------
-⌘+t | new tab
-⌘+number | jump to tab
-⌘+d | pane vertical
-⌘+Shift+d | pane horizontal
-⌘+⌥+arrows | move around panes
-⌘+Shift+Enter | zoom
-⌘+L | Clear screen
-
-+++
-
-@snap[north]
-### Extra
-@snapend
-
-@ul[list-smaller](false)
-- You can drag and drop files from finder to get absolute path
-- You can open files in default application with `open [file]`
-- Preferences:
-  - [General] Confirm quit
-  - [Profile/General] reuse previous session's directory
-  - [Profile/Terminal] unlimited scrollback
-- configure alt + arrows for word skipping: https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x
-@ulend
+## @color[#E1473B](idea)
+* 2 to 5 person teams playing against eachother
+* Every X minutes table is reset and top teams get points
+* Continuous bot development
+* Not all team members need to be developers. Someone needs to go though the actions taken and see what needs to be improved
+* Fun and prizes
+* "stolen" from leanpoker.org
 
 ---
 
-@title[zsh]
+@title[System]
 
-## zsh
-
-+++
-
-@snap[north]
-### shell
-@snapend
-
-- `bash` is default
-- differences: https://stackabuse.com/zsh-vs-bash/
-
-+++
-
-@snap[north]
-### keybindings
-@snapend
-
-Key | effect
-------|--------
-^+d | exit, logout
-^+a | go to beginning of the line
-^+e | go to end of the line
-⌥+f | go forward one word
-^+f | go forward one character
-⌥+b | go back one word
-^+b | go back one character
-
-+++
-
-@snap[north]
-### keybinding 2
-@snapend
-
-Key | effect
-------|--------
-⌥+Backspace | delete word (without symbols)
-^+w | delete word (with symbols)
-^+u | delete before cursor
-^+k | delete after cursor
-^+p | previous command
-^+n | next command
-^+r | history search
-
-+++
-
-@snap[north]
-### other
-@snapend
-
-command | effect
-------|--------
-cd | go to home directory
-cd - | go to previous directory
-exec $SHELL | reinitialize shell
+## @color[#E1473B](system)
+* Elixir GenServers with Phoenix Channels (Websockets)
+* Vuejs Frontend
+* Server would run on AWS
+* Clients (in multiple languages) would be run localy
+* Channels clients - elixir, node, swift, java, c#
+* WebSocket clients - ruby, python, ?
 
 ---
 
-@title[oh-my-zsh]
+@title[TODO]
 
-## OhMyZsh
+## @color[#E1473B](todo)
 
-+++
-
-- .zshrc - edit here :)
-- themes: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-- plugins: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview
-  * history-substring-search
-  * z
-  * git (https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)
-- export environment variables
-  * EDITOR
-  * PATH
+- increase blinds
+- antes
+- separate pots and overbetting
+- handle ties (splits)
+- handle disconects
+- handle timeouts
+- stres test
 
 ---
 
-@title[programs]
+@title[What is needed]
 
-## Programs
+## @color[#E1473B](what is needed)
 
-+++
-
-@snap[north]
-### brew
-@snapend
-
-- brew install
-- brew info
-- brew services list
-- brew switch
-- brew doctor
-
-+++
-
-@snap[north]
-### z
-@snapend
-
-https://github.com/rupa/z
-
-+++
-
-@snap[north]
-### fzf
-@snapend
-
-- https://github.com/junegunn/fzf#usage
-- rake routes | fzf
-- ^+r - fuzzy history search
-
-
-+++
-
-@snap[north]
-### cat
-@snapend
-
-cat [file]
-
-+++
-
-@snap[north]
-### grep
-@snapend
-
-grep [PATTERN] files
+* 10MD development to finish
+* One person to help me test and write more clients
+* Coding space (office)
+* Prizes
 
 ---
 
-## Clipboard manager
+@title[Timeline]
 
-- flycut
-- alfred pro
+## @color[#E1473B](possible timeline)
+
+- Send announcement email - in the next week
+  * to see the interest and language preferences
+- Send second email - start of February
+  * to remind people and give some statistics
+  * finalize rules
+- Organize the hackaton - Middle of February (W7, W8)
+  * After student exams
