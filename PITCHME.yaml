@@ -32,7 +32,7 @@ theme-override : template/css/PITCHME.css
 # Title Setting
 # Doc: https://gitpitch.com/docs/settings/title
 #
-title : "Oauth 2.0"
+title : "Servers"
 
 #
 # Footnote Setting

@@ -1,11 +1,11 @@
 @font-face {
   font-family: GT-Haptik;
-  src: url('https://assets.infinum.co/assets/gt-haptik-regular-webfont-e2876d81515b18ca8f025105e783436afb755f28c71c40b4e5905fd5b9f0df3a.woff2') format('woff2');
+  src: url('https://assets.infinum.com/assets/gt-haptik-regular-webfont-e2876d81515b18ca8f025105e783436afb755f28c71c40b4e5905fd5b9f0df3a.woff2') format('woff2');
 }
 
 @font-face {
   font-family: GT-Haptik;
-  src: url('https://assets.infinum.co/assets/gt-haptik-bold-webfont-26278a21c5257a94cd35906ad336ce14dfe3c52edd234fa7d8b4d8bd6b420ece.woff2') format('woff2');
+  src: url('https://assets.infinum.com/assets/gt-haptik-bold-webfont-26278a21c5257a94cd35906ad336ce14dfe3c52edd234fa7d8b4d8bd6b420ece.woff2') format('woff2');
   font-weight: bold;
 }
 
