@@ -1,6 +1,6 @@
 @title[Intro]
 
-# How our servers work?
+# Observability
 
 @snap[south-west span-100 subtitle]
 STJEPAN HADJIĆ
@@ -8,107 +8,136 @@ STJEPAN HADJIĆ
 
 ---
 
-@title[App vs Web Server]
+@title[Definition]
 
-## @color[#E1473B](App vs Web Server)
+#### @color[#E1473B](Observability is a measure of how well internal states of a system can be inferred from knowledge of its external outputs.)
 
-@ul
-- Web server
-  * HTML, JS, CSS, Images
-  * Apache, @color[#E1473B](Nginx)
-- App server
-  * Backend
-  * @color[#E1473B](Passenger), unicorn, puma, thin, webrick
+Note:
+a measure of how well we can understand a system from the work it does.
+
+---?image=img/observability.png&size=100% 100%&position=bottom
+
+@title[Three pillars]
+
+Note:
+- 2013: The Twitter Observability team describes their mission
+- 2016: The (four) Pillars of Observability at Twitter
+- 2017: The Three Pillars of Observability
+- 2020: redfiend
+- Observability is when you’re able to understand the internal state of a system from the data it provides, and you can explore that data to answer any question about what happened and why.
+
+---
+
+@title[Warning]
+
+## @color[#E1473B](Not debugging!)
+
+---
+
+@title[Monitoring]
+
+## @color[#E1473B](Monitoring Tools)
+
+@ul[](false)
+* New Relic
+* Datadog
+* Scout
+* Skylight
 @ulend
 
 ---
 
-@title[Nginx]
+@title[Logs]
 
-## @color[#E1473B](Nginx)
+## @color[#E1473B](Logs Tools)
 
-@ul
-* Web server
-* Has an asynchronous, event-driven architecture
-* https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/
-@ulend
-
-+++
-
-@title[Nginx]
-
-## @color[#E1473B](host.conf)
-
-```
-server {
-  listen 80;
-  server_name atlas.pmiapps.com;
-
-  location / {
-    return 301 https://$server_name$request_uri;
-  }
-}
-
-server {
-  listen 443 ssl;
-  server_name atlas.pmiapps.com;
-
-  access_log /var/log/nginx/atlas.pmiapps.com.log combined;
-  error_log /var/log/nginx/atlas.pmiapps.com.err;
-  ssl_certificate /etc/letsencrypt/live/atlas.pmiapps.com/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/atlas.pmiapps.com/privkey.pem;
-
-  add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; preload;";
-  add_header X-Content-Type-Options nosniff;
-  add_header X-XSS-Protection "1; mode=block";
-
-  root /home/atlas_production/www/atlas.pmiapps.com/current/public;
-
-  location / {
-    passenger_enabled on;
-    passenger_app_env production;
-  }
-}
-```
-
-+++
-
-@title[Nginx]
-
-## @color[#E1473B](cache.conf)
-
-```
-location ~ \.(js|css|png|jpg|jpeg|gif|ico|xml|swf|flv|eot|ttf|woff|pdf|xls|htc|svg)$ {
-  add_header Pragma "public";
-  add_header Cache-Control "public, must-revalidate, proxy-revalidate";
-  expires   30d;
-}
-location ~* \.(eot|otf|ttf|woff|woff2?)$ {
-  add_header Access-Control-Allow-Origin *;
-  add_header Pragma "public";
-  add_header Cache-Control "public, must-revalidate, proxy-revalidate";
-  expires    30d;
-}
-```
-
----
-
-@title[Passenger]
-
-## @color[#E1473B](Passenger)
-
-@ul
-* Application server
-* Standalone or @color[#E1473B](nginx module)
-* at its core Passenger is a process manager
-* 2 concurrency models
+@ul[](false)
+* New Relic
+* Logz.io
+* Graylog
+* ELK
 @ulend
 
 Note:
-- Passenger launches the application as external processes, and manages them. 
-- Passenger load balances traffic between processes, shuts down processes when they're no longer needed or when they misbehave, keeps them running and restarts them when they crash, etc.
-- process – single-threaded, multi-processed I/O concurrency. Each application process only has a single thread and can only handle 1 request at a time. This is the concurrency model that Ruby applications traditionally used. It has excellent compatibility (can work with applications that are not designed to be thread-safe) but is unsuitable for workloads in which the application has to wait for a lot of external I/O (e.g. HTTP API calls), and uses more memory because each process has a large memory overhead.
-- thread – multi-threaded, multi-processed I/O concurrency. Each application process has multiple threads (customizable via passenger_thread_count. This model provides much better I/O concurrency and uses less memory because threads share memory with each other within the same process. However, using this model may cause compatibility problems if the application is not designed to be thread-safe.
+New relic logs: 75$/month/daily GB
+
+---?image=img/grafana.jpg&size=100% 80%&position=bottom
+
+@title[Our stack]
+
+@snap[north span-100 subtitle]
+## @color[#E1473B](Grafana + Prometheus + Loki)
+@snapend
+
+---
+
+@title[Grafana]
+
+## @color[#E1473B](Grafana)
+
+@ul[](false)
+* A way to organize all your sources
+* Dashboard 
+* Alerts
+@ulend
+
+Note: 
+* Lots of sources
+* Conencts to cloudwatch, postgres
+* Beautiful graphs
+* with all kinds of panels
+* 3rd party plugins
+
+---
+
+@title[Prometheus]
+
+## @color[#E1473B](Prometheus)
+
+Time series database
+
+@img[prometheus](img/prometheus.jpg)
+
+---
+
+@title[Prometheus Data]
+
+## @color[#E1473B](Data)
+
+```
+# HELP ruby_http_requests_total Total HTTP requests from web app.
+# TYPE ruby_http_requests_total counter
+ruby_http_requests_total{controller="core/dashboard/audiences",action="index",status="200"} 23
+ruby_http_requests_total{controller="core/dashboard/audiences",action="new",status="200"} 3
+ruby_http_requests_total{controller="core/dashboard/audiences",action="users",status="200"} 26
+ruby_http_requests_total{controller="core/dashboard/audiences",action="create",status="302"} 3
+```
+
+---
+
+@title[Loki]
+
+## @color[#E1473B](Loki)
+
+@ul[](false)
+* log aggregation system inspired by Prometheus.
+@ulend
+
+@img[loki](img/loki.png)
+
+---
+
+@title[How to]
+
+## @color[#E1473B](How to)
+
+@ul[](false)
+* monitoring ec2 instance (grafana + prometheus + loki)
+* per system exporters (node_exporter)
+* per system promtail
+* per application exporters (gem)
+* per application promtail
+@ulend
 
 ---
 
